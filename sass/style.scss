@@ -1,19 +1,18 @@
-$font-primary: 'Quicksand', Arial, sans-serif;
-
+$font-primary: 'Oswald',Arial, sans-serif;
+$font-secondary: 'Open Sans', Arial, sans-serif;
 // Overrides
 $grid-gutter-width: 40px !default; 
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #F75940 !default;
-
-
+$brand-primary: #ffbf00 !default;
+$brand-gradient: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 
 $brand-white: #fff;
 $brand-black: #000;
-$brand-darker: #444;
+$brand-darker: #331BA5;
 $brand-gray: #ccc;
-$brand-lighter: #e9e9e9;
+$brand-lighter: #4629BF;
 $brand-body-color: #e8e8e8;
 $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
@@ -112,7 +111,7 @@ body {
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 1.8;
-	color: rgba(0,0,0,.7);
+	color: #ffffff;
 	@media screen and (max-width: $screen-md) {
 		font-size: 16px;
 	}	
@@ -167,12 +166,12 @@ figure {
   background: $brand-primary;
 }
 
-#colorlib-page {
+#dcrab-page {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
-#colorlib-aside {
+#dcrab-aside {
 	padding-top: 3em;
 	padding-bottom: 40px;
 	padding-left: 3em;
@@ -183,9 +182,9 @@ figure {
 	bottom: 0;
 	top: 0;
 	left: 0;	
-	overflow-y: scroll;
+	overflow-y: hidden;
 	z-index: 1001;
-	background: $brand-white;
+	background: $brand-darker;
 	@include transition(.5s);
 	@media screen and (max-width: $screen-lg) {
 		width: 30%;
@@ -195,7 +194,7 @@ figure {
 		@include translateX(-270px);
 		padding-top: 4em;
 	}
-	#colorlib-logo {
+	#dcrab-logo {
 		text-align: right;
 		font-weight: 400;
 		font-size: 22px;
@@ -221,7 +220,7 @@ figure {
 			}
 		}
 	}
-	#colorlib-main-menu {
+	#dcrab-main-menu {
 		ul {
 			text-align: right;
 			margin: 0;
@@ -238,7 +237,7 @@ figure {
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				a {
-					color: rgba(0,0,0,.4);
+					color: #ffffff;
 					text-decoration: none;
 					position: relative;
 					padding: 10px 0;
@@ -251,7 +250,7 @@ figure {
 						bottom: 7px;
 						left: 0;
 						right: 0;
-						background-color: $brand-black;
+						background-color: $brand-primary;
 						visibility: hidden;
 						-webkit-transform: scaleX(0);
 						-moz-transform: scaleX(0);
@@ -266,7 +265,7 @@ figure {
 					}
 					&:hover {
 						text-decoration: none;
-						color: rgba(0,0,0,1);
+						color: $brand-primary;
 						
 						&:after {
 							visibility: visible;
@@ -278,9 +277,9 @@ figure {
 						}
 					}
 				}
-				&.colorlib-active {
+				&.dcrab-active {
 					a {
-						color: $brand-black;
+						color: $brand-primary;
 						&:after {
 							visibility: visible;
 							-webkit-transform: scaleX(1);
@@ -294,7 +293,7 @@ figure {
 			}
 		}
 	}
-	.colorlib-footer {
+	.dcrab-footer {
 		position: absolute;
 		bottom: 40px;
 		right: 1.5em;
@@ -302,7 +301,7 @@ figure {
 		font-size: 15px;
 		text-align: right;
 		font-weight: 400;
-		color: rgba(0,0,0,.6);
+		color: $brand-primary;
 		padding: 0 20px;
 		@media screen and (max-width: $screen-sm) {
 			position: relative;
@@ -310,6 +309,10 @@ figure {
 		}
 		span {
 			display: block;
+			color: $brand-primary;
+		}
+		.copyright{
+			color: $brand-white;
 		}
 		ul {
 			padding: 0;
@@ -321,7 +324,7 @@ figure {
 				display: inline;
 				list-style: none;
 				a {
-					color: rgba(0,0,0,.7);
+					color: $brand-primary;
 					padding: 4px;
 					&:hover, &:active, &:focus {
 						text-decoration: none;
@@ -334,9 +337,10 @@ figure {
 	}
 }
 
-#colorlib-main {
+#dcrab-main {
 	width: 80%;
 	float: right;
+	background-color: $brand-lighter;
 	@include transition(.5s);
 	@media screen and (max-width: $screen-lg) {
 		width: 70%;
@@ -347,7 +351,7 @@ figure {
 }
 
 
-#colorlib-hero {
+#dcrab-hero {
 	min-height: 500px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	width: 100%;
@@ -456,7 +460,7 @@ figure {
 						font-size: 30px;
 					}
 				}s
-				.colorlib-lead{
+				.dcrab-lead{
 					font-size: 20px;
 					color: $brand-white;
 				}
@@ -490,28 +494,87 @@ figure {
 
 }
 
+#dcrab-hero-main{
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: url("../images/main-bg.jpg");
+	background-position: center;
+	background-size: cover;
+	.parallax-overlay{
+		display: -webkit-flex;
+		display: flex;
+		flex-flow: row wrap;
+		-webkit-flex-flow: row wrap;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		height: 100vh;
+		width: 100%;
+		background: rgba(70,41,191 , 0.5 );
+		background-image: url("../images/overlay-pattern3.png");
+	}
+	.dcrab-hero-main-inner{
+		h1{
+			font-size: 100px;
+			color: $brand-white;
+			font-weight: 700;
+			text-align: left;
+			text-shadow: 0 0 40px #FFFFFF, 2px 2px 3px black;
+			font-family: $font-primary;
+			span{
+				color: #4100ff;
+			}
+		}
+	}
+}
+canvas{
+	vertical-align: bottom;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	position: absolute !important;
+}
+.particles-js-canvas-el {
+	height: 100vh !important;
+}
+
 body {
 	&.offcanvas {
 		overflow-x: hidden;
-		#colorlib-aside {
+		#dcrab-aside {
 			@include translateX(0);
 			width: 270px;
 			background: $brand-white;
 			z-index: 999;
 			position: fixed;
 		}
-		#colorlib-main, .colorlib-nav-toggle {
+		#dcrab-main, .dcrab-nav-toggle {
 			top: 0;
 			@include translateX(270px);
 		}
 	}
 }
 
-.colorlib-blog,
-.colorlib-work,
-.colorlib-about,
-.colorlib-services,
-.colorlib-contact{
+.dcrab-blog,
+.dcrab-work,
+.dcrab-about,
+.dcrab-services,
+.dcrab-contact{
 	padding-top: 4em;
 	padding-bottom: 9em;
 	clear: both;
@@ -532,7 +595,7 @@ body {
 	position: relative;
 }
 
-.colorlib-heading {
+.dcrab-heading {
 	font-size: 18px;
 	margin-bottom: 4em;
 	font-weight: 500;
@@ -852,7 +915,7 @@ content: "\ea1c";
 }
 
 
-.colorlib-lead {
+.dcrab-lead {
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -866,7 +929,7 @@ content: "\ea1c";
 }
 
 
-.colorlib-social {
+.dcrab-social {
 	padding: 0;
 	margin: 0;
 	text-align: center;
@@ -905,18 +968,18 @@ content: "\ea1c";
 	}
 }
 
-.colorlib-more-contact {
+.dcrab-more-contact {
 	background: lighten($brand-black, 98%);	
 	border: 1px solid red;
 }
 
-.colorlib-feature {
+.dcrab-feature {
 	text-align: left;
 	width: 100%;
 	float: left;
 	margin-bottom: 40px;
 	position: relative;
-	.colorlib-icon {
+	.dcrab-icon {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -937,7 +1000,7 @@ content: "\ea1c";
 			}
 		}
 	}
-	.colorlib-text {
+	.dcrab-text {
 		padding-left: 120px;
 		width: 100%;
 		h2, h3 {
@@ -953,11 +1016,11 @@ content: "\ea1c";
 			text-transform: uppercase;
 		}
 	}
-	&.colorlib-feature-sm {
-		.colorlib-text {
+	&.dcrab-feature-sm {
+		.dcrab-text {
 			margin-top: 30px;
 		}
-		.colorlib-icon {
+		.dcrab-icon {
 			i {
 				color: $brand-primary;
 				font-size: 40px;
@@ -970,8 +1033,8 @@ content: "\ea1c";
 }
 
 
-.colorlib-feature-lg{
-	.colorlib-text {
+.dcrab-feature-lg{
+	.dcrab-text {
 		h2, h3 {
 			margin: 0;
 			padding: 0;
@@ -988,7 +1051,7 @@ content: "\ea1c";
 }
 
 
-.colorlib-bg-color{
+.dcrab-bg-color{
 	background: lighten($brand-black,98%);
 	position: relative;
 }
@@ -1180,7 +1243,7 @@ content: "\ea1c";
 }
 
 // Burger Menu
-.colorlib-nav-toggle {
+.dcrab-nav-toggle {
   cursor: pointer;
   text-decoration: none;
   &.active i {
@@ -1234,22 +1297,22 @@ content: "\ea1c";
   }
 }
 
-.colorlib-nav-toggle i::before {
+.dcrab-nav-toggle i::before {
   top: -7px;
 }
-.colorlib-nav-toggle i::after {
+.dcrab-nav-toggle i::after {
   bottom: -7px;
 }
-.colorlib-nav-toggle:hover i::before {
+.dcrab-nav-toggle:hover i::before {
   top: -10px;
 }
-.colorlib-nav-toggle:hover i::after {
+.dcrab-nav-toggle:hover i::after {
   bottom: -10px;
 }
-.colorlib-nav-toggle.active i {
+.dcrab-nav-toggle.active i {
 	background: transparent;
 }
-.colorlib-nav-toggle.active i::before {
+.dcrab-nav-toggle.active i::before {
   top:0;
   -webkit-transform: rotateZ(45deg);
      -moz-transform: rotateZ(45deg);
@@ -1257,7 +1320,7 @@ content: "\ea1c";
        -o-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-.colorlib-nav-toggle.active i::after {
+.dcrab-nav-toggle.active i::after {
   bottom:0;
   -webkit-transform: rotateZ(-45deg);
      -moz-transform: rotateZ(-45deg);
@@ -1265,7 +1328,7 @@ content: "\ea1c";
        -o-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-.colorlib-nav-toggle {
+.dcrab-nav-toggle {
   	position: fixed;
   	left: -4px;
 	top: 0px;
