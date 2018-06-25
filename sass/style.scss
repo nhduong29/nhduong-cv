@@ -17,6 +17,9 @@ $brand-body-color: #e8e8e8;
 $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
 $brand-bg-color: $brand-white;
+$brand-1: #2dfcb8;
+$brand-2: #f5f935;
+$brand-3: #5036d6;
 
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
@@ -130,7 +133,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $brand-black;
+	color: $brand-primary;
 	font-family: $font-primary;
 	font-weight: 400;
 	margin: 0 0 30px 0;
@@ -586,6 +589,34 @@ body {
 	}
 }
 
+.dcrab-services{
+	.service-box{
+		background-color: $brand-darker;
+		padding:15px;
+		border-radius: 3px;
+		-webkit-box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.8);
+		-moz-box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.8);
+		box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.8);
+		image{
+			width: 200px;
+			height: 250px;
+		}
+	}
+	h2{
+		font-size: 16px;
+		margin-top: 20px;
+		margin-bottom: 0;
+		text-align: center;
+		letter-spacing: 3px;
+		color: $brand-white;
+		text-transform: uppercase;
+	}
+	p{
+		text-align: center;
+		font-weight: 300;
+	}
+}
+
 
 .about-img,
 .about-img-2{
@@ -593,7 +624,14 @@ body {
 	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
+	border-radius: 3px;
 }
+
+.about-img-2{
+	background-color: $brand-3;
+	background-image: url("../images/developer.png");
+}
+
 
 .dcrab-heading {
 	font-size: 18px;
@@ -612,9 +650,9 @@ body {
 .heading-meta{
 	margin-bottom: 15px;
 	display: block;
-	font-size: 10px;
+	font-size: 30px;
 	text-transform: uppercase;
-	color: lighten($brand-black,60%);
+	color: $brand-1;
 	font-weight: 500;
 	letter-spacing: 5px;
 }
@@ -630,9 +668,9 @@ body {
 		top: 80px;
 		right: -100px;
 		width: 80%;
-		-webkit-box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.33);
-		-moz-box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.33);
-		box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.33);
+		-webkit-box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.8);
+		-moz-box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.8);
+		box-shadow: 0px 35px 78px -23px rgba(0,0,0,0.8);
 	}
 }
 .about-desc{

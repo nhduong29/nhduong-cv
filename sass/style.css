@@ -34,7 +34,7 @@ p {
   margin-bottom: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #ffbf00;
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0; }
@@ -442,12 +442,39 @@ body.offcanvas {
       padding-top: 5em;
       padding-bottom: 8em; } }
 
+.dcrab-services .service-box {
+  background-color: #331BA5;
+  padding: 15px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8); }
+  .dcrab-services .service-box image {
+    width: 200px;
+    height: 250px; }
+.dcrab-services h2 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase; }
+.dcrab-services p {
+  text-align: center;
+  font-weight: 300; }
+
 .about-img,
 .about-img-2 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  border-radius: 3px; }
+
+.about-img-2 {
+  background-color: #5036d6;
+  background-image: url("../images/developer.png"); }
 
 .dcrab-heading {
   font-size: 18px;
@@ -465,9 +492,9 @@ body.offcanvas {
 .heading-meta {
   margin-bottom: 15px;
   display: block;
-  font-size: 10px;
+  font-size: 30px;
   text-transform: uppercase;
-  color: #999999;
+  color: #2dfcb8;
   font-weight: 500;
   letter-spacing: 5px; }
 
@@ -481,9 +508,9 @@ body.offcanvas {
     top: 80px;
     right: -100px;
     width: 80%;
-    -webkit-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.33);
-    -moz-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.33);
-    box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.33); }
+    -webkit-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8); }
 
 .about-desc h3 {
   font-size: 18px;
