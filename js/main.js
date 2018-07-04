@@ -299,6 +299,12 @@
             }
         });
 	}
+	var initProcessData = function(){
+		$('.process-value').each(function (index, element) {
+            var process_value = $(element).data('process-value');
+            $(element).css({width:process_value+'%'})
+        });
+	}
 
 	// Document on load.
 	$(function(){
@@ -310,6 +316,7 @@
 		stickyFunction();
 		initParticle();
 		amazingText();
+        initProcessData();
 	});
 
 

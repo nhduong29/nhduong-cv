@@ -385,6 +385,9 @@ figure {
     font-family: "Oswald", Arial, sans-serif; }
     #dcrab-hero-main .dcrab-hero-main-inner h1 span {
       color: #4100ff; }
+    @media screen and (max-width: 768px) {
+      #dcrab-hero-main .dcrab-hero-main-inner h1 {
+        font-size: 60px; } }
 
 canvas {
   vertical-align: bottom;
@@ -412,7 +415,7 @@ body.offcanvas {
     -o-transform: translateX(0);
     transform: translateX(0);
     width: 270px;
-    background: #fff;
+    background: #331BA5;
     z-index: 999;
     position: fixed; }
   body.offcanvas #dcrab-main, body.offcanvas .dcrab-nav-toggle {
@@ -442,27 +445,20 @@ body.offcanvas {
       padding-top: 5em;
       padding-bottom: 8em; } }
 
-.dcrab-services .service-box {
+.dcrab-services .horizontal-box {
   background-color: #331BA5;
-  padding: 15px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 35px 78px -23px rgba(0, 0, 0, 0.8); }
-  .dcrab-services .service-box image {
-    width: 200px;
-    height: 250px; }
-.dcrab-services h2 {
-  font-size: 16px;
-  margin-top: 20px;
-  margin-bottom: 0;
-  text-align: center;
-  letter-spacing: 3px;
-  color: #fff;
-  text-transform: uppercase; }
-.dcrab-services p {
-  text-align: center;
-  font-weight: 300; }
+  background-image: url("../images/work-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 60px 20%;
+  height: 700px; }
+.dcrab-services .process-bar {
+  height: 8px;
+  background-color: white; }
+  .dcrab-services .process-bar .process-value {
+    background: red;
+    height: 100%;
+    width: 50%; }
 
 .about-img,
 .about-img-2 {
